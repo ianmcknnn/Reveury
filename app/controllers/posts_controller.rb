@@ -1,11 +1,11 @@
 class PostController < ApplicationController
 
   def index
-    @users = Post.all
+    @posts = Post.all
   end
 
   def show
-    @user = Post.find(params[:id])
+    @post = Post.find(params[:id])
   end
   
 end
