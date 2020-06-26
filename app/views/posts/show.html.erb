@@ -4,5 +4,22 @@
     <p>
         <%= @post.content %> 
     </p>
+    <h4>Tags</h4>
+    <ul>
+      <% @post.tags.each do |tag| %>
+        <li><%= tag.name%></li>
+      <% end %>
+      <li><%= form_for @tag do |f|%></li>
+        <%= f.text_field :name, placeholder: "add a tag"%>
+        <%= f.submit %>
+      <% end %>
+    </ul>
     <%= link_to "Go Back to All Posts", posts_path %>
+    <%= link_to "Create new post", new_post_path %>
+    <%= link_to "Edit this post", edit_post_path %>
+    <%= link_to "Delete this post", post_path(@post.id), method: "DELETE" %>
+    
 </div> 
+
+
+

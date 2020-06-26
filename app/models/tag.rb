@@ -8,4 +8,6 @@ class Tag < ApplicationRecord
     self.posts
   end 
 
+
+
 end

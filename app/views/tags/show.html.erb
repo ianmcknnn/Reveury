@@ -1,2 +1,10 @@
 <h1> <%= @tag.name %> </h1>
+<div> 
+  <ul>
+    <% @tag.posts_with_tag.each do |post| %>
+      <li><%= link_to post.title, post_path(post.id)%></li>
+
+    <% end %>
+  </ul>
+</div>
 

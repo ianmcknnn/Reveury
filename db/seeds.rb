@@ -25,6 +25,6 @@ tag_names.each do |tn|
 end
 
 Post.all.each do |post|
-  2.times {PostsTag.create(post_id: post.id, tag_id: Tag.find(rand(Tag.first.id..Tag.last.id)))}
+  2.times {PostsTag.create(post_id: post.id, tag_id: Tag.find(rand(Tag.first.id..Tag.last.id)).id)}
 end
 
